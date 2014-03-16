@@ -1,0 +1,11 @@
+<div class="port-picker" ng-controller="PortPickerCtrl">
+	<ul class="port-list">
+		<li ng-repeat="port in ports" class="port-list__item">
+			<a title="{{port.comName}}" class="button button--icon button--wide" ng-click="connectToPort(port)">
+				<i class="icon-usb lrg button__icon"></i>
+				<span class="port-list__item__name">{{port.comName}}</span><br />
+				<span class="port-list__item__manufacturer">{{port.manufacturer}}</span>
+			</a>
+		</li>
+	</li>
+</div>

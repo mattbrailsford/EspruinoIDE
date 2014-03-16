@@ -1,0 +1,19 @@
+{
+  "name": "espruino",
+  "main": "app.html",
+  "single-instance": false,
+  "window": {
+        "title": "Espruino v0.1",
+        "icon": "images/logo_64.png",
+        "toolbar": false,
+        "frame": false,
+        "position": "center",
+        "resizable": true,
+        "width": 800,
+        "min_width": 600,
+        "height": 600,
+        "min_height": 600,
+        "show": false,
+        "resizable": true 
+    }
+}

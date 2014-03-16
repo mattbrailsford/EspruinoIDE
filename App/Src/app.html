@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Espruino</title>
+
+		<link rel="stylesheet" href="vendor/toastr/toastr.css">
+		<link rel="stylesheet" href="vendor/terminal/jquery.terminal.css">
+		<link rel="stylesheet" href="vendor/splitster/splitster.css">
+		<link rel="stylesheet" href="styles/fonts.css">
+		<link rel="stylesheet" href="styles/app.css">
+
+	    <style>
+	    
+	        [ng-cloak] {
+	            display: none;
+	            opacity: 0;
+	        }
+
+	    </style>
+
+		<script>
+
+	        window.addEventListener('keydown', function (e) {
+	            if (e.keyIdentifier === 'F12') {
+	                require('nw.gui').Window.get().showDevTools();
+	            }
+	        });
+
+	    </script>
+
+		<script src="vendor/LAB/LAB.min.js"></script>
+		<script src="scripts/bootstrapper.js"></script>
+		<script src="scripts/init.js"></script>
+	</head>
+	<body ng-controller="AppCtrl" nw-app nw-tray>
+
+		<window text="Espruino v0.1" 
+			show-minimize="true" show-fullscreen="true" show-close="true" 
+			minimize="minimize()" fullscreen="toggleFullscreen()" close="close()"
+			class="window--app">
+			<div class="view-wrapper" ng-view></div>
+		</window>
+
+	</body>
+
+</html>

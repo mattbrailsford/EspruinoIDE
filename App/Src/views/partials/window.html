@@ -1,0 +1,15 @@
+<div class="window {{class}}">
+
+	<div class="window__title-bar title-bar">
+		<h5 class="title-bar__title">{{text}}</h5>
+		<div class="title-bar__buttons">
+			<a class="icon-alert sml title-bar__button title-bar__button--alert" title="Alert" ng-show="showAlert" ng-click="alert()"></a><!--
+			--><a class="icon-minus sml title-bar__button title-bar__button--minimize" title="Minimize" ng-show="showMinimize" ng-click="minimize()"></a><!--
+			--><a class="icon-window sml title-bar__button title-bar__button--fullscreen" title="Toggle Fullscreen" ng-show="showFullscreen" ng-click="fullscreen()"></a><!--
+			--><a class="icon-cross sml title-bar__button title-bar__button--close" title="Close" ng-show="showClose" ng-click="close()"></a>
+		</div>
+	</div>
+
+	<div class="window__viewport viewport" ng-transclude></div>
+
+</div>

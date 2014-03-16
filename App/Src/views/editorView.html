@@ -1,0 +1,69 @@
+<!-- Toolbar -->
+<div class="toolbar">
+	<div class="h-split">
+		<div class="h-split__left">
+			
+			<div class="toolbar__buttons">
+				<a class="icon-{{connected ? 'disconnect' : 'connect'}} lrg toolbar__button toolbar__button--{{connected ? 'disconnect' : 'connect'}}" title="{{connected ? 'Disconnect' : 'Connect'}}" ng-click="toggleConnection()"></a>
+			</div>
+
+		</div>
+		<div class="h-split__right">
+			
+			<div class="toolbar__buttons">
+				<a class="icon-split-{{layout}} lrg toolbar__button toolbar__button--layout" title="Layout" ng-click="toggleLayout()"></a><!--
+				--><a class="icon-settings lrg toolbar__button toolbar__button--settings" title="Settings"></a>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Editors -->
+<split-pane orientation="{{layout}}">
+	<split-pane-pane>
+		
+		<!-- Code Editor -->
+		<div class="editor-wrapper">
+			<div class="sidebar editor-wrapper__sidebar">
+
+				<div class="v-split">
+					<div class="v-split__top">
+						<a class="icon-folder lrg toolbar__button toolbar__button--layout" title="Open..."></a><!--
+						--><a class="icon-save lrg toolbar__button toolbar__button--settings" title="Save"></a><!--
+						--><a class="icon-deploy lrg toolbar__button toolbar__button--settings" title="Deploy"></a>
+					</div>
+					<div class="v-split__bottom">
+						<a class="icon-code lrg toolbar__button toolbar__button--layout" title="Code Mode"></a>
+					</div>
+				</div>
+
+			</div>
+			<div class="editor editor-wrapper__editor">
+				<code-editor></code-editor>
+			</div>
+		</div>
+
+	</split-pane-pane>
+	<split-pane-pane>
+		
+		<!-- Console Editor -->
+		<div class="editor-wrapper">
+			<div class="sidebar editor-wrapper__sidebar">
+
+				<div class="v-split">
+					<div class="v-split__top">
+						<a class="icon-clear lrg toolbar__button toolbar__button--layout" title="Clear Screen"></a><!--
+						--><a class="icon-webcam lrg toolbar__button toolbar__button--settings" title="Webcam"></a>
+					</div>
+					<div class="v-split__bottom"></div>
+				</div>
+
+			</div>
+			<div class="editor editor-wrapper__editor">
+				<terminal-editor></terminal-editor>
+			</div>
+		</div>
+
+	</split-pane-pane>
+</split-pane>

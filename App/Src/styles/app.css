@@ -1,0 +1,549 @@
+/* 
+    ===================================================
+    Resets
+    ===================================================
+ */
+
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+*, *:before, *:after {
+  	-moz-box-sizing: border-box; 
+  	-webkit-box-sizing: border-box; 
+  	box-sizing: border-box;
+}
+
+/* 
+    ===================================================
+    Typography
+    ===================================================
+*/
+
+body 
+{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+	line-height: 1.4;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5
+{
+ 	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+
+p
+{
+	color: #5e6365;
+	margin: 5px 0 0;
+	padding: 0;
+}
+
+/* 
+    ===================================================
+    Core
+    ===================================================
+ */
+
+a, button, .no-drag
+{
+	-webkit-app-region: no-drag;
+}
+
+::-webkit-scrollbar 
+{
+	background: #ecf0f1;
+	width: 15px;
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background: #bdc3c7;
+	border: 5px solid #ecf0f1;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: #42484a;
+}
+
+/* 
+    ===================================================
+    Abstracts
+    ===================================================
+ */
+
+ .h-split
+ {
+ 	display: table;
+    width: 100%;
+ }
+
+ 	.h-split__left,
+    .h-split__right 
+    {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+	    .h-split--middle .h-split__left,
+	    .h-split--middle .h-split__right
+	    {
+	        vertical-align: middle;
+	    }
+
+	    .h-split--bottom .h-split__left,
+	    .h-split--bottom .h-split__right 
+	    {
+	        vertical-align: bottom;
+	    }
+
+    .h-split__left 
+    {
+
+    }
+
+    .h-split__right 
+    {
+        direction: rtl;
+    }
+
+	    .h-split__right > * 
+	    {
+	        direction: ltr;
+	    }
+
+.v-split
+{
+	position: relative;
+	display: table;
+	height: 100%;
+}
+
+	.v-split__top,
+    .v-split__bottom 
+    {
+        display: table-row;
+        vertical-align: top;
+        height: auto;
+    }
+
+    .v-split__bottom 
+    {
+        vertical-align: bottom;
+        height: 1px;
+    }
+
+.button 
+{
+	position: relative;
+	display: inline-block;
+	background: #ccc;
+	border: 0;
+	cursor: pointer;
+	padding: 10px;
+	height: 60px;
+}
+
+	.button--wide
+	{
+		width: 100%;
+	}
+
+	.button--icon
+	{
+		border-left: 60px solid #999;
+	}
+
+	.button--icon .button__icon
+	{
+		position: absolute;
+		top: 0;
+		left: -60px;
+	}
+
+	.button:hover 
+	{
+		color: #fff !important;
+		background: #2ecc71;
+	}
+
+	.button:hover *
+	{
+		color: #fff !important;
+	}
+
+	.button--icon:hover 
+	{
+		border-left-color: #27ae60;
+	}
+
+/* 
+    ===================================================
+    Icons
+    ===================================================
+ */
+
+[class*="icon-"] 
+{
+	display: block;
+	position: relative;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+}
+
+[class*="icon-"]:before 
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: transparent url(../images/icons.png) left top;
+}
+
+a[class*="icon-"]
+{
+	cursor: pointer;
+}
+
+a[class*="icon-"]:before 
+{
+	
+}
+
+a[class*="icon-"]:hover
+{
+	background-color: rgba(0,0,0,.15);
+}
+
+a[class*="icon-"]:hover:before
+{
+	
+}
+
+[class*="icon-"].lrg,
+[class*="icon-"].lrg:before
+{
+	width: 60px;
+	height: 60px;
+}
+
+[class*="icon-"].sml,
+[class*="icon-"].sml:before
+{
+	width: 30px;
+	height: 30px;
+}
+
+.icon-cross.lrg:before { background-position: 0 0 }
+.icon-cross.sml:before { background-position: -60px 0 }
+
+.icon-window.lrg:before { background-position: 0 -60px }
+.icon-window.sml:before { background-position: -60px -60px }
+
+.icon-minus.lrg:before { background-position: 0 -120px }
+.icon-minus.sml:before { background-position: -60px -120px }
+
+.icon-plus.lrg:before { background-position: 0 -180px }
+.icon-plus.sml:before { background-position: -60px -180px }
+
+.icon-back.lrg:before { background-position: 0 -240px }
+.icon-back.sml:before { background-position: -60px -240px }
+
+.icon-forward.lrg:before { background-position: 0 -300px }
+.icon-forward.sml:before { background-position: -60px -300px }
+
+.icon-down.lrg:before { background-position: 0 -360px }
+.icon-down.sml:before { background-position: -60px -360px }
+
+.icon-up.lrg:before { background-position: 0 -420px }
+.icon-up.sml:before { background-position: -60px -420px }
+
+.icon-settings.lrg:before { background-position: 0 -480px }
+.icon-settings.sml:before { background-position: -60px -480px }
+
+.icon-alert.lrg:before { background-position: 0 -540px }
+.icon-alert.sml:before { background-position: -60px -540px }
+
+.icon-connect.lrg:before { background-position: 0 -600px }
+.icon-connect.sml:before { background-position: -60px -600px }
+
+.icon-disconnect.lrg:before { background-position: 0 -660px }
+.icon-disconnect.sml:before { background-position: -60px -660px }
+
+.icon-split-vertical.lrg:before { background-position: 0 -720px }
+.icon-split-vertical.sml:before { background-position: -60px -720px }
+
+.icon-split-horizontal.lrg:before { background-position: 0 -780px }
+.icon-split-horizontal.sml:before { background-position: -60px -780px }
+
+.icon-folder.lrg:before { background-position: 0 -840px }
+.icon-folder.sml:before { background-position: -60px -840px }
+
+.icon-folder-open.lrg:before { background-position: 0 -900px }
+.icon-folder-open.sml:before { background-position: -60px -900px }
+
+.icon-save.lrg:before { background-position: 0 -960px }
+.icon-save.sml:before { background-position: -60px -960px }
+
+.icon-deploy.lrg:before { background-position: 0 -1020px }
+.icon-deploy.sml:before { background-position: -60px -1020px }
+
+.icon-code.lrg:before { background-position: 0 -1080px }
+.icon-code.sml:before { background-position: -60px -1080px }
+
+.icon-clear.lrg:before { background-position: 0 -1140px }
+.icon-clear.sml:before { background-position: -60px -1140px }
+
+.icon-eye.lrg:before { background-position: 0 -1200px }
+.icon-eye.sml:before { background-position: -60px -1200px }
+
+.icon-webcam.lrg:before { background-position: 0 -1260px }
+.icon-webcam.sml:before { background-position: -60px -1260px }
+
+.icon-block.lrg:before { background-position: 0 -1320px }
+.icon-block.sml:before { background-position: -60px -1320px }
+
+.icon-bin.lrg:before { background-position: 0 -1380px }
+.icon-bin.sml:before { background-position: -60px -1380px }
+
+.icon-star.lrg:before { background-position: 0 -1440px }
+.icon-star.sml:before { background-position: -60px -1440px }
+
+.icon-heart.lrg:before { background-position: 0 -1500px }
+.icon-heart.sml:before { background-position: -60px -1500px }
+
+.icon-lightning.lrg:before { background-position: 0 -1560px }
+.icon-lightning.sml:before { background-position: -60px -1560px }
+
+.icon-tick.lrg:before { background-position: 0 -1620px }
+.icon-tick.sml:before { background-position: -60px -1620px }
+
+.icon-cloud.lrg:before { background-position: 0 -1680px }
+.icon-cloud.sml:before { background-position: -60px -1680px }
+
+.icon-usb.lrg:before { background-position: 0 -1740px }
+.icon-usb.sml:before { background-position: -60px -1740px }
+
+/* 
+    ===================================================
+    Components
+    ===================================================
+ */
+
+/* Window */
+.window
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+	.window--modal
+	{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background: white;
+		z-index: 200;
+	}
+
+	.window__title-bar 
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.window--app .window__title-bar
+	{
+		z-index: 100;
+		-webkit-app-region: drag;
+	}
+
+	.window--modal .window__title-bar .title-bar__title
+	{
+		text-align: left;
+	}
+
+	.window__viewport
+	{
+		position: absolute;
+		top: 30px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		overflow: auto;
+	}
+
+/* Overlay */
+.overlay 
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.4;
+	z-index: 199;
+}
+
+/* Title Bar */
+.title-bar
+{
+	background: #333;
+	color: #fff;
+	height: 30px;
+}
+
+	.title-bar__title
+	{
+		text-align: center;
+		line-height: 30px;
+		margin: 0;
+		padding: 0 10px;
+	}
+
+	.title-bar__buttons
+	{
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	.title-bar__button 
+	{
+		display: inline-block;
+	}
+
+/* Toolbar */
+.toolbar 
+{
+	position: relative;
+	background: #3498db;
+	height: 60px;
+}
+
+	.toolbar__buttons,
+	.toolbar__button
+	{
+		display: inline-block;
+	}
+
+	.toolbar__button--connect.icon-connect { background: #f1c40f; }
+	.toolbar__button--connect.icon-connect:hover { background: #f39c12; }
+
+	.toolbar__button--disconnect.icon-disconnect { background: #2ecc71; }
+	.toolbar__button--disconnect.icon-disconnect:hover { background: #27ae60; }
+
+/* Port List */
+.port-list,
+.port-list__item
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.port-list
+{
+	padding: 10px;
+}
+
+	.port-list__item
+	{
+		margin-bottom: 10px;
+	}
+
+	.port-list__item__name
+	{
+		font-weight: bold;
+	}
+
+	.port-list__item__manufacturer
+	{
+		color: #666;
+	}
+
+/* 
+    ===================================================
+    Layout
+    ===================================================
+ */
+
+html,
+body,
+.view-wrapper
+{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+html 
+{
+	background: #fff;
+}
+
+
+
+/* Split Pane */
+.split-pane
+{
+	position: absolute;
+	margin-top: 60px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+/* Editor Wrapper */
+.editor-wrapper
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+	.editor-wrapper__sidebar
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.editor-wrapper__editor
+	{
+		position: absolute;
+		top: 0;
+		left: 60px;
+		right: 0;
+		bottom: 0;
+	}
+
+/* Sidebar */
+.sidebar
+{
+	background: #42484a;
+	width: 60px;
+	height: 100%;
+	overflow: visible;
+}
+
+	.sidebar .v-split 
+	{
+		background: #42484a;
+	}
